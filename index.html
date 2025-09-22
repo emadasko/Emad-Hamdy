@@ -3,15 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Emad Hamdy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Rubik', sans-serif;
+            scroll-behavior: smooth;
         }
         .hero-section {
             background: radial-gradient(at 0% 0%, #171717, #0a0a0a 50%, #000000 100%);
+        }
+        .filter-button:focus {
+            outline: none;
+            box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+            transform: scale(0.98);
+        }
+        .nav-link {
+            position: relative;
+            z-index: 10;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            opacity: 0;
+            border-radius: 9999px;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: black;
+        }
+        .nav-link:hover::before {
+            opacity: 1;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -24,12 +57,12 @@
                 <span class="text-white">Emad Hamdy</span>
                 <span class="text-gray-400">Abdelmaboud</span>
             </div>
-            <ul class="flex space-x-6 text-sm font-semibold">
-                <li><a href="#home" class="text-white hover:text-gray-400 transition-colors duration-300">Home</a></li>
-                <li><a href="#about" class="text-white hover:text-gray-400 transition-colors duration-300">About</a></li>
-                <li><a href="#services" class="text-white hover:text-gray-400 transition-colors duration-300">Services</a></li>
-                <li><a href="#projects" class="text-white hover:text-gray-400 transition-colors duration-300">Projects</a></li>
-                <li><a href="#contact" class="text-white hover:text-gray-400 transition-colors duration-300">Contact</a></li>
+            <ul class="flex space-x-2 text-sm font-semibold">
+                <li><a href="#home" class="nav-link text-white hover:text-gray-400">Home</a></li>
+                <li><a href="#about" class="nav-link text-white hover:text-gray-400">About</a></li>
+                <li><a href="#services" class="nav-link text-white hover:text-gray-400">Services</a></li>
+                <li><a href="#projects" class="nav-link text-white hover:text-gray-400">Projects</a></li>
+                <li><a href="#contact" class="nav-link text-white hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -50,7 +83,8 @@
 
                 <!-- Buttons and Social Icons -->
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-8">
-                    <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-full transition-transform transform hover:scale-105 shadow-lg">
+                    <!-- Updated a tag with a sample PDF link -->
+                    <a href="DC EMAD HAMDY CV3.pdf" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-full transition-transform transform hover:scale-105 shadow-lg" target="_blank">
                         Download CV
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                     </a>
@@ -83,10 +117,10 @@
         
         <!-- Filter Buttons -->
         <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
-            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-700 text-white hover:bg-white hover:text-black">ALL</button>
-            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">WEB</button>
-            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">UI/UX</button>
-            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">DESIGN</button>
+            <button class="filter-button px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-700 text-white hover:bg-white hover:text-black">ALL</button>
+            <button class="filter-button px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">WEB</button>
+            <button class="filter-button px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">UI/UX</button>
+            <button class="filter-button px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">DESIGN</button>
         </div>
 
         <!-- Projects Grid -->
@@ -118,6 +152,24 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 md:px-8 lg:px-16 text-center bg-gray-900">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">Here you can write about your background, skills, and passion for your work.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 md:px-8 lg:px-16 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Services</h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">List the services you offer here, such as web development, graphic design, etc.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 md:px-8 lg:px-16 text-center bg-gray-900">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Contact</h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">Provide your contact information or a form for people to get in touch with you.</p>
     </section>
 
 </body>

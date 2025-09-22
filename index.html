@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصفحة الرئيسية</title>
+    <title>Personal Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -11,31 +11,47 @@
             font-family: 'Rubik', sans-serif;
         }
         .hero-section {
-            background: radial-gradient(at 0% 0%, #1a082c, #0d0611 50%, #000000 100%);
+            background: radial-gradient(at 0% 0%, #171717, #0a0a0a 50%, #000000 100%);
         }
     </style>
 </head>
 <body class="bg-black text-white">
 
-    <!-- Hero Section -->
-    <section class="hero-section min-h-screen flex items-center justify-center py-12 px-4 md:px-8 lg:px-16">
-        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-7xl">
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-blur-md">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="text-xl font-bold">
+                <span class="text-white">Emad Hamdy</span>
+                <span class="text-gray-400">Abdelmaboud</span>
+            </div>
+            <ul class="flex space-x-6 text-sm font-semibold">
+                <li><a href="#home" class="text-white hover:text-gray-400 transition-colors duration-300">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-gray-400 transition-colors duration-300">About</a></li>
+                <li><a href="#services" class="text-white hover:text-gray-400 transition-colors duration-300">Services</a></li>
+                <li><a href="#projects" class="text-white hover:text-gray-400 transition-colors duration-300">Projects</a></li>
+                <li><a href="#contact" class="text-white hover:text-gray-400 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Main Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center py-12 px-4 md:px-8 lg:px-16">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-7xl">
             <!-- Text Content -->
             <div class="flex-1 text-center md:text-left">
-                <p class="text-xl md:text-2xl font-semibold text-gray-300 mb-2">أنا عماد حمدي</p>
+                <p class="text-xl md:text-2xl font-semibold text-gray-400 mb-2">I am Emad Hamdy</p>
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-                    <span class="block">مصمم جرافيك و</span>
-                    <span class="block text-purple-400">مسؤول منسق مستندات</span>
+                    <span class="block">Graphic Designer &</span>
+                    <span class="block text-white">Documents Coordinator</span>
                 </h1>
                 <p class="text-base md:text-lg text-gray-400 mb-8 max-w-lg mx-auto md:mx-0">
-                    أنا مطور واجهات أمامية متمرس ولدي شغف بإنشاء تجارب مستخدم سلسة وجذابة بصريًا.
+                    I am a seasoned frontend developer with a passion for creating seamless and visually appealing user experiences.
                 </p>
 
                 <!-- Buttons and Social Icons -->
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-8">
                     <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-full transition-transform transform hover:scale-105 shadow-lg">
-                        تنزيل السيرة الذاتية
+                        Download CV
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                     </a>
                     <div class="flex items-center gap-4 text-white">
@@ -54,9 +70,52 @@
 
             <!-- Image -->
             <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 bg-purple-500 rounded-3xl z-0" style="background: url('https://placehold.co/400x400/805ad5/ffffff?text=Your+Photo') no-repeat center center; background-size: cover; border: 4px solid #805ad5;"></div>
-                <div class="absolute inset-0 bg-purple-500 rounded-3xl z-10 opacity-50" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100%25\' height=\'100%25\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L61.803 36.327L99.034 44.832L74.52 72.822L80.902 110.168L50 93.663L19.098 110.168L25.48 72.822L0.966 44.832L38.197 36.327L50 0Z\' fill=\'none\' stroke=\'rgba(255,255,255,0.1)\' stroke-width=\'1\'%3E%3C/path%3E%3C/svg%3E'); background-size: 100%;"></div>
-                <img src="https://placehold.co/400x400/805ad5/ffffff?text=Your+Photo" alt="Your Photo" class="w-full h-full object-cover rounded-3xl relative z-20" />
+                <div class="absolute inset-0 bg-gray-600 rounded-3xl z-0" style="background: url('https://placehold.co/400x400/805ad5/ffffff?text=Your+Photo') no-repeat center center; background-size: cover; border: 4px solid #805ad5;"></div>
+                <div class="absolute inset-0 bg-gray-600 rounded-3xl z-10 opacity-50" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100%25\' height=\'100%25\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L61.803 36.327L99.034 44.832L74.52 72.822L80.902 110.168L50 93.663L19.098 110.168L25.48 72.822L0.966 44.832L38.197 36.327L50 0Z\' fill=\'none\' stroke=\'rgba(255,255,255,0.1)\' stroke-width=\'1\'%3E%3C/path%3E%3C/svg%3E'); background-size: 100%;"></div>
+                <img src="https://placehold.co/400x400/4a5568/ffffff?text=Your+Photo" alt="Your Photo" class="w-full h-full object-cover rounded-3xl relative z-20" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 md:px-8 lg:px-16 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12">My Projects</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
+            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-700 text-white hover:bg-white hover:text-black">ALL</button>
+            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">WEB</button>
+            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">UI/UX</button>
+            <button class="px-6 py-2 rounded-full font-semibold transition-colors duration-300 bg-gray-800 hover:bg-gray-700 text-gray-300">DESIGN</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                <img src="https://placehold.co/600x400/4a5568/ffffff?text=Project+1" alt="Project 1" class="w-full h-auto object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Project Title 1</h3>
+                    <p class="text-gray-400">A brief description of the project.</p>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                <img src="https://placehold.co/600x400/4a5568/ffffff?text=Project+2" alt="Project 2" class="w-full h-auto object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
+                    <p class="text-gray-400">A brief description of the project.</p>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                <img src="https://placehold.co/600x400/4a5568/ffffff?text=Project+3" alt="Project 3" class="w-full h-auto object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
+                    <p class="text-gray-400">A brief description of the project.</p>
+                </div>
             </div>
         </div>
     </section>
